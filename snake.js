@@ -21,9 +21,9 @@ function drawSnake() {
     snake.forEach((segment, index) => {
         const snakeElement = createGameElement("div", "snake");
 
-        // 🟢 Make the head different in color
+        //    head different in color
         if (index === 0) {
-            snakeElement.style.backgroundColor = "black"; // Change to dark green if preferred: "#004d00"
+            snakeElement.style.backgroundColor = "black";  
         }
 
         setPosition(snakeElement, segment);
@@ -83,13 +83,13 @@ function move() {
 function checkCollision() {
     const head = snake[0];
 
-    // 🛑 Wall collision
+    //   Wall collision
     if (head.x < 1 || head.x > gridSize || head.y < 1 || head.y > gridSize) {
         endGame();
         return;
     }
 
-    // 🛑 Self-collision
+    //  Self-collision
     for (let i = 1; i < snake.length; i++) {
         if (head.x === snake[i].x && head.y === snake[i].y) {
             endGame();
