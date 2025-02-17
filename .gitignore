@@ -1,0 +1,9 @@
+*.log
+*.dat
+.DS_Store
+Thumbs.db
+.vscode/
+.eclipse/
+.p2/
+.cache/
+AppData/
